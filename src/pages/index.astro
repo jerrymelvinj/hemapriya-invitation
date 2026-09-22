@@ -1,0 +1,579 @@
+---
+// src/pages/index.astro
+// ZERO-JAVASCRIPT ASTRO ARCHITECTURE
+// Visual Hierarchy & Design System mapped 1:1 from "Venkat.jpg"
+// Content: D. Maneshkumar & Visutha (alias) R. Hemapriya Wedding
+
+const couple = {
+  initials: "M & H",
+  groom: {
+    name: "D. MANESHKUMAR",
+    education: "BCA, MBA, M.Sc, PGDAL",
+    profession: "Assistant Manager - HR, Elite HR Solutions and Services, Chennai",
+    parents: "Mr. K.P. Dharmalingam & Mrs. D. Palaniyammal",
+    native: "M. Kalathur",
+  },
+  bride: {
+    name: "VISUTHA (alias) R. HEMAPRIYA",
+    education: "MA, D.Co-op",
+    profession: "Assistant, Co-Operative Urban Bank (Gov), Lalgudi",
+    parents: "Mr. T. Ravikumaran (Depo Manager, Dept. of Agri. Gov) & Mrs. R. Senthamarai",
+    native: "Manakkal",
+  },
+  invocationThirukkural: "அன்பும் அறமும் உடைத்தாயின் இல்வாழ்க்கை\nபண்பும் பயனும் அது.",
+  invocationEnglish: '"Anbum aramum udaithayin ilvaazhkai panbum payanum adhu."',
+  blessingIntro: "WITH THE GRACE OF THE ALMIGHTY & THE BLESSINGS OF OUR BELOVED FAMILIES",
+  invitationVerse: [
+    "TWO LIVES, TWO HEARTS",
+    "JOINED TOGETHER IN",
+    "FRIENDSHIP, UNITED",
+    "FOREVER IN LOVE. WE",
+    "JOYFULLY REQUEST THE",
+    "HONOUR OF YOUR",
+    "PRESENCE AND PRAYERS",
+    "AS WE TAKE OUR VOWS",
+    "AND BEGIN OUR NEW",
+    "JOURNEY TOGETHER.",
+  ],
+};
+
+const events = [
+  {
+    number: "01",
+    tag: "SACRED WEDDING CEREMONY",
+    title: "THE MUHURTHAM",
+    tagline: "Mangalya Dharanam & Sacred Vows",
+    date: "Sunday, October 25, 2026",
+    time: "Auspicious Time: 4:30 AM to 5:30 AM",
+    venueName: "Sri Sivakami Ambiga Samedha Chidambareswarar Temple",
+    venueLocation: "Mettupatti",
+    dressCodeLabel: "DRESS CODE",
+    dressCodeText: "Traditional Kanchipuram Pattu & Veshti",
+    palette: [
+      { hex: "#FAF8F3", name: "Mullai Cream" },
+      { hex: "#C29B62", name: "Sandalwood Gold" },
+      { hex: "#5C3B3D", name: "Kumkum Maroon" },
+    ],
+    mapQuery: "Sri Sivakami Ambiga Samedha Chidambareswarar Temple, Mettupatti",
+  },
+  {
+    number: "02",
+    tag: "CELEBRATION & FEAST",
+    title: "THE RECEPTION",
+    tagline: "Felicitation, Dinner & Warm Wishes",
+    date: "Sunday, October 25, 2026",
+    time: "10:45 AM Onwards",
+    venueName: "Sri Balamurugan Thirumana Mandapam",
+    venueLocation: "Balasamudram, Thottiyam",
+    dressCodeLabel: "DRESS CODE",
+    dressCodeText: "Festive Traditional & Formal Ethnic",
+    palette: [
+      { hex: "#1A2238", name: "Royal Indigo" },
+      { hex: "#D3AE37", name: "Mustard Gold" },
+      { hex: "#BF7F80", name: "Festive Rose" },
+    ],
+    mapQuery: "Sri Balamurugan Thirumana Mandapam, Balasamudram, Thottiyam",
+  },
+];
+
+const family = {
+  brideBrothers: [
+    { name: "R. Venkataramanan", qualification: "BCA" },
+    { name: "R. Ritheeswaran", qualification: "B.E." },
+  ],
+  groomBrotherFamily: {
+    parents: "Mr. T. Dineshkumar (MCA) & Mrs. T. Sandhiya (M.Com)",
+    children: "T. Hariharan & T. Vyas",
+  },
+  groomSisterFamily: "Mr. Sundarraj & Mrs. Jeyalakshmi",
+  groomAuntUncle: "Mr. P. Saravanan & Mrs. S. Meera (Chennai)",
+  groomMaternalUncles: ["Mr. Andi", "Mr. Singaram", "Mr. Velusamy", "Mr. Karumalai"],
+  brideMaternalUncles: ["G. Selvam", "Iniyan", "Mugilan", "Hemanth Priyan", "Mr. Dinesh"],
+};
+
+const contacts = [
+  {
+    side: "Bride's Side",
+    place: "Manakkal",
+    phones: ["8056492576", "6374330758"],
+  },
+  {
+    side: "Groom's Side",
+    place: "M. Kalathur",
+    phones: ["9962893736", "8825781654"],
+  },
+];
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Maneshkumar & Hemapriya — Wedding Invitation</title>
+    <meta name="description" content="Wedding celebration invitation of D. Maneshkumar & Visutha (alias) R. Hemapriya." />
+    <meta name="theme-color" content="#FDFBF7" />
+
+    <!-- Google Fonts Preconnect & Optimized Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ─────────────────────────────────────────────────────────────
+         ZERO-JAVASCRIPT CSS SCROLL-DRIVEN ANIMATIONS
+         100% Native Compositor Thread Hardware-Accelerated (60/120 fps)
+         ───────────────────────────────────────────────────────────── */
+
+      :root {
+        --color-cream-bg: #FBF8F2;
+        --color-terracotta: #DF7A4D;
+        --color-gold: #C29B62;
+        --color-seal: #B19052;
+        --color-text-dark: #2A241E;
+        --color-text-muted: #7D6F61;
+      }
+
+      /* Parallax Timeline: bound to root page scroll */
+      @keyframes templeParallax {
+        0% { transform: translate3d(0, 0, 0) scale(1); }
+        100% { transform: translate3d(0, 20%, 0) scale(1.03); }
+      }
+
+      /* Card Entry Timeline: bound to element view intersection */
+      @keyframes cardReveal {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 44px, 0) scale(0.97);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+      }
+
+      @keyframes textSubtleFade {
+        0% { opacity: 0.2; transform: translate3d(0, 16px, 0); }
+        100% { opacity: 1; transform: translate3d(0, 0, 0); }
+      }
+
+      /* Progressive Enhancement Fallback */
+      .scroll-reveal-card {
+        opacity: 1;
+        transform: none;
+        will-change: transform, opacity;
+      }
+
+      .parallax-gopuram {
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+      }
+
+      @supports (animation-timeline: view()) {
+        .scroll-reveal-card {
+          opacity: 0;
+          transform: translate3d(0, 44px, 0) scale(0.97);
+          animation: cardReveal cubic-bezier(0.16, 1, 0.3, 1) both;
+          animation-timeline: view();
+          animation-range: entry 6% cover 26%;
+        }
+
+        .scroll-reveal-header {
+          animation: textSubtleFade linear both;
+          animation-timeline: view();
+          animation-range: entry 5% cover 30%;
+        }
+
+        .parallax-gopuram {
+          animation: templeParallax linear both;
+          animation-timeline: scroll(root);
+        }
+      }
+
+      /* Gold Seal Styling */
+      .seal-shimmer {
+        background: radial-gradient(circle at 35% 35%, #e6d3a3 0%, #b19052 60%, #85672c 100%);
+        box-shadow: 0 2px 8px rgba(177, 144, 82, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#FDFBF7] text-[#2A241E] font-['Jost',sans-serif] antialiased overflow-x-hidden selection:bg-[#DF7A4D]/20 selection:text-[#2A241E]">
+    
+    <!-- ═════════════════════════════════════════════════════════════
+         TOP BAR / HEADER (Z-30)
+         Matches Venkat.jpg: Monogram left, Antique Gold Seal right
+         ═════════════════════════════════════════════════════════════ -->
+    <header class="fixed top-0 left-0 right-0 w-full z-30 px-6 py-4 flex justify-between items-center bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#EFE8DC]/60 transition-all">
+      <span class="font-['Cinzel',serif] text-sm sm:text-base font-semibold tracking-[0.28em] text-[#2A241E]">
+        {couple.initials}
+      </span>
+      <div 
+        class="w-7 h-7 rounded-full seal-shimmer flex items-center justify-center cursor-pointer transition-transform hover:scale-105 active:scale-95" 
+        title="Family Seal"
+        aria-label="Family Seal"
+      >
+        <span class="w-4 h-4 rounded-full border border-[#FAF8F3]/60 flex items-center justify-center">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#FAF8F3]/80"></span>
+        </span>
+      </div>
+    </header>
+
+    <main class="w-full max-w-md mx-auto relative">
+
+      <!-- ═══════════════════════════════════════════════════════════
+           HERO SECTION (min-h-[100dvh])
+           Contains Z-0 (Parallax Temple) & Z-10 (Typography)
+           ═══════════════════════════════════════════════════════════ -->
+      <section class="relative w-full min-h-[100dvh] pt-20 pb-8 flex flex-col justify-between overflow-hidden">
+        
+        <!-- STATIC TYPOGRAPHY LAYER (Z-10) -->
+        <div class="relative z-10 px-6 flex flex-col items-end text-right w-full">
+          
+          <!-- Sacred Invocation / Blessings -->
+          <div class="mb-3 max-w-[340px] text-right">
+            <p class="font-['Jost',sans-serif] text-[9px] uppercase tracking-[0.22em] text-[#7D6F61] leading-relaxed">
+              {couple.blessingIntro}
+            </p>
+          </div>
+
+          <!-- Parents Invitation Note -->
+          <div class="max-w-[320px] text-right mb-3">
+            <p class="text-[9px] uppercase tracking-[0.14em] text-[#9A8A7A] leading-relaxed">
+              With blessings of <strong class="text-[#5C4F43]">{couple.groom.parents}</strong> ({couple.groom.native})<br />
+              &amp; <strong class="text-[#5C4F43]">{couple.bride.parents}</strong> ({couple.bride.native})
+            </p>
+          </div>
+
+          <!-- Couple Names: Terracotta & Script Ampersand -->
+          <div class="my-1 w-full text-right">
+            
+            <!-- Groom -->
+            <div>
+              <h1 class="font-['Cormorant_Garamond',serif] text-4xl sm:text-5xl font-normal tracking-wide text-[#DF7A4D] leading-[0.95]">
+                {couple.groom.name}
+              </h1>
+              <p class="text-[9.5px] uppercase tracking-[0.18em] text-[#C29B62] font-medium mt-1">
+                {couple.groom.education}
+              </p>
+              <p class="text-[8.5px] text-[#7D6F61] tracking-wider mt-0.5 max-w-[280px] ml-auto leading-tight">
+                {couple.groom.profession}
+              </p>
+            </div>
+
+            <!-- Ampersand -->
+            <div class="text-right pr-6 my-1">
+              <span class="font-['Pinyon_Script',cursive] italic text-4xl sm:text-5xl text-[#C29B62] inline-block select-none">
+                &amp;
+              </span>
+            </div>
+
+            <!-- Bride -->
+            <div>
+              <h1 class="font-['Cormorant_Garamond',serif] text-3xl sm:text-4xl font-normal tracking-wide text-[#DF7A4D] leading-[0.95]">
+                {couple.bride.name}
+              </h1>
+              <p class="text-[9.5px] uppercase tracking-[0.18em] text-[#C29B62] font-medium mt-1">
+                {couple.bride.education}
+              </p>
+              <p class="text-[8.5px] text-[#7D6F61] tracking-wider mt-0.5 max-w-[280px] ml-auto leading-tight">
+                {couple.bride.profession}
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ASYMMETRICAL MID-HERO: Temple Left (Z-0) + Poetic Column Right (Z-10) -->
+        <div class="relative w-full flex items-end justify-between px-6 pt-4 pb-0 z-10">
+          
+          <!-- Z-0: Parallax Temple Motif (Anchored to Left/Bottom) -->
+          <div class="parallax-gopuram absolute bottom-0 -left-4 w-[62%] sm:w-[58%] max-w-[260px] h-[72vh] max-h-[580px] z-0 pointer-events-none origin-bottom-left">
+            <div class="relative w-full h-full">
+              <img
+                src="/gopuram_cutout.png"
+                onerror="this.onerror=null; this.src='/gopuram.jpg';"
+                alt="Chidambareswarar Temple Tower"
+                class="w-full h-full object-contain object-bottom drop-shadow-[0_10px_25px_rgba(223,122,77,0.15)] filter saturate-[1.1] contrast-[1.02]"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#FDFBF7] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+              <div class="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[#FDFBF7] to-transparent pointer-events-none"></div>
+            </div>
+          </div>
+
+          <!-- Z-10: Narrow Columnar Poetic Invitation Verse (Anchored Beside Spire) -->
+          <div class="relative z-10 ml-auto text-right w-[44%] max-w-[175px] pb-10">
+            <div class="border-r border-[#DF7A4D]/40 pr-3 py-1">
+              <p class="font-['Jost',sans-serif] text-[9.5px] font-normal uppercase tracking-[0.2em] leading-[2.1] text-[#42382F] text-right">
+                {couple.invitationVerse.map((line) => (
+                  <span>{line}<br/></span>
+                ))}
+              </p>
+            </div>
+
+            <!-- Thirukkural Citation Badge -->
+            <div class="mt-4 pr-3">
+              <p class="font-['Cormorant_Garamond',serif] italic text-xs text-[#C29B62] leading-snug">
+                {couple.invocationEnglish}
+              </p>
+              <p class="text-[8px] uppercase tracking-widest text-[#96887B] mt-1">
+                — Thirukkural (குறள் 45)
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Scroll Indicator Hint -->
+        <div class="relative z-10 w-full flex flex-col items-center justify-center pt-2 pb-2 text-[#A29486]">
+          <span class="text-[8px] uppercase tracking-[0.3em] font-medium mb-1">Scroll to Celebrate</span>
+          <div class="w-4 h-7 rounded-full border border-[#C29B62]/50 flex items-start justify-center p-1">
+            <div class="w-1 h-2 bg-[#DF7A4D] rounded-full animate-bounce"></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           EVENT SCHEDULE SECTION (Z-20)
+           Strictly Wedding & Reception (Haldi & Sangeet Removed)
+           ═══════════════════════════════════════════════════════════ -->
+      <section class="relative z-20 bg-[#F5F1E8] px-5 py-14 rounded-t-[36px] shadow-[0_-12px_40px_rgba(42,36,30,0.04)] border-t border-[#EFE8DC]">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-10 scroll-reveal-header">
+          <h2 class="font-['Cormorant_Garamond',serif] text-3xl sm:text-4xl font-semibold tracking-[0.08em] text-[#2A241E] uppercase">
+            Auspicious Events
+          </h2>
+          <p class="font-['Jost',sans-serif] text-[9.5px] tracking-[0.35em] text-[#7D6F61] uppercase mt-2 font-medium">
+            Join In The Holy Matrimony
+          </p>
+          <div class="w-10 h-[1.5px] bg-[#C29B62] mx-auto mt-3"></div>
+        </div>
+
+        <!-- Event Cards Stack -->
+        <div class="space-y-7">
+          {events.map((event) => (
+            <article class="scroll-reveal-card bg-white rounded-[28px] p-7 shadow-[0_8px_30px_rgba(42,36,30,0.04)] border border-[#EFE8DC] text-center flex flex-col items-center">
+              
+              <span class="text-[9px] uppercase tracking-[0.25em] text-[#DF7A4D] font-semibold mb-1">
+                {event.tag}
+              </span>
+
+              <h3 class="font-['Cormorant_Garamond',serif] text-2xl sm:text-3xl font-semibold text-[#2A241E] tracking-wide uppercase leading-tight mb-2">
+                {event.title}
+              </h3>
+              
+              <p class="text-[10px] tracking-[0.2em] text-[#7D6F61] uppercase font-light mb-3">
+                {event.tagline}
+              </p>
+
+              <div class="w-12 h-[1px] bg-[#C29B62]/60 mb-3"></div>
+
+              <!-- Date & Time -->
+              <p class="font-['Jost',sans-serif] text-xs font-semibold text-[#DF7A4D] tracking-wider mb-1">
+                {event.date}
+              </p>
+              <p class="font-['Jost',sans-serif] text-[11px] font-medium text-[#B8873A] tracking-wider mb-3">
+                {event.time}
+              </p>
+
+              <!-- Venue Details -->
+              <p class="font-['Cormorant_Garamond',serif] text-base text-[#42382F] font-semibold mt-1">
+                {event.venueName}
+              </p>
+              <p class="text-xs text-[#8A7C6D] tracking-wide leading-relaxed font-normal">
+                {event.venueLocation}
+              </p>
+
+              <!-- Inner Sand Capsule (Dress Code + 3 Swatch Dots) -->
+              <div class="w-full bg-[#F5EFE6] rounded-2xl py-4 px-4 mt-5 border border-[#ECE4D8] flex flex-col items-center">
+                <span class="text-[8.5px] uppercase tracking-[0.28em] text-[#8A7968] font-semibold mb-1">
+                  {event.dressCodeLabel}
+                </span>
+                <p class="text-xs text-[#3A3127] font-normal tracking-wide mb-3">
+                  {event.dressCodeText}
+                </p>
+
+                <!-- 3 Color Swatch Dots -->
+                <div class="flex items-center gap-2.5" role="list" aria-label="Event Color Palette">
+                  {event.palette.map((color) => (
+                    <span 
+                      class="w-3.5 h-3.5 rounded-full ring-1 ring-black/10 shadow-sm transition-transform hover:scale-125"
+                      style={`background-color: ${color.hex};`}
+                      title={`${color.name} (${color.hex})`}
+                      role="listitem"
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <!-- Direction Action Button -->
+              <div class="mt-5 w-full flex justify-center">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.mapQuery)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] font-medium text-[#DF7A4D] hover:text-[#C86237] py-2 px-5 rounded-full border border-[#DF7A4D]/30 hover:border-[#DF7A4D] transition-colors"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Get Directions
+                </a>
+              </div>
+
+            </article>
+          ))}
+
+          <!-- ═════════════════════════════════════════════════════════
+               KEY FAMILY MEMBERS CARD
+               ═════════════════════════════════════════════════════════ -->
+          <article class="scroll-reveal-card bg-white rounded-[28px] p-7 shadow-[0_8px_30px_rgba(42,36,30,0.04)] border border-[#EFE8DC] text-center flex flex-col items-center">
+            
+            <span class="text-[9px] uppercase tracking-[0.25em] text-[#DF7A4D] font-semibold mb-1">
+              BLESSINGS &amp; WISHES
+            </span>
+
+            <h3 class="font-['Cormorant_Garamond',serif] text-2xl font-semibold text-[#2A241E] tracking-wide uppercase mb-1">
+              Key Family Members
+            </h3>
+            <p class="text-[10px] tracking-[0.2em] text-[#7D6F61] uppercase font-light mb-4">
+              With Best Compliments From
+            </p>
+            
+            <div class="w-12 h-[1px] bg-[#C29B62]/60 mb-5"></div>
+
+            <div class="w-full text-left space-y-4 text-xs">
+              
+              <!-- Bride's Brothers -->
+              <div class="bg-[#FBF8F2] p-3.5 rounded-xl border border-[#EFE8DC]">
+                <p class="text-[9px] uppercase tracking-[0.2em] text-[#DF7A4D] font-semibold mb-1">
+                  Bride's Brothers
+                </p>
+                <p class="text-[#3A3127] font-medium">
+                  {family.brideBrothers.map(b => `${b.name} (${b.qualification})`).join(" & ")}
+                </p>
+              </div>
+
+              <!-- Groom's Brother's Family -->
+              <div class="bg-[#FBF8F2] p-3.5 rounded-xl border border-[#EFE8DC]">
+                <p class="text-[9px] uppercase tracking-[0.2em] text-[#DF7A4D] font-semibold mb-1">
+                  Groom's Brother's Family
+                </p>
+                <p class="text-[#3A3127] font-medium leading-relaxed">
+                  {family.groomBrotherFamily.parents}<br />
+                  <span class="text-[11px] text-[#7D6F61]">Children: {family.groomBrotherFamily.children}</span>
+                </p>
+              </div>
+
+              <!-- Sister & Brother-in-Law & Aunt/Uncle -->
+              <div class="bg-[#FBF8F2] p-3.5 rounded-xl border border-[#EFE8DC]">
+                <p class="text-[9px] uppercase tracking-[0.2em] text-[#DF7A4D] font-semibold mb-1">
+                  Sister, Brother-in-Law &amp; Extended Family
+                </p>
+                <p class="text-[#3A3127] font-medium leading-relaxed">
+                  • {family.groomSisterFamily} (Sister &amp; Brother-in-law)<br />
+                  • {family.groomAuntUncle} (Aunt &amp; Uncle)
+                </p>
+              </div>
+
+              <!-- Maternal Uncles -->
+              <div class="bg-[#FBF8F2] p-3.5 rounded-xl border border-[#EFE8DC]">
+                <p class="text-[9px] uppercase tracking-[0.2em] text-[#DF7A4D] font-semibold mb-1">
+                  Maternal Uncles
+                </p>
+                <div class="space-y-1.5 text-[11px] text-[#42382F] leading-relaxed">
+                  <p>
+                    <strong class="text-[#2A241E]">Groom's Side:</strong> {family.groomMaternalUncles.join(", ")}
+                  </p>
+                  <p>
+                    <strong class="text-[#2A241E]">Bride's Side:</strong> {family.brideMaternalUncles.join(", ")}
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- ═════════════════════════════════════════════════════════
+               CONTACT & INVITATION DESK CARD
+               ═════════════════════════════════════════════════════════ -->
+          <article class="scroll-reveal-card bg-white rounded-[28px] p-7 shadow-[0_8px_30px_rgba(42,36,30,0.04)] border border-[#EFE8DC] text-center flex flex-col items-center">
+            
+            <span class="text-[9px] uppercase tracking-[0.25em] text-[#DF7A4D] font-semibold mb-1">
+              CONTACT &amp; ENQUIRIES
+            </span>
+
+            <h3 class="font-['Cormorant_Garamond',serif] text-2xl font-semibold text-[#2A241E] tracking-wide uppercase mb-1">
+              Cordially Welcoming You
+            </h3>
+            <p class="text-[10px] tracking-[0.2em] text-[#7D6F61] uppercase font-light mb-4">
+              Feel Free to Reach Out
+            </p>
+            
+            <div class="w-12 h-[1px] bg-[#C29B62]/60 mb-5"></div>
+
+            <div class="w-full space-y-4">
+              {contacts.map((contact) => (
+                <div class="bg-[#F5EFE6] p-4 rounded-2xl border border-[#ECE4D8] text-center">
+                  <span class="text-[9px] uppercase tracking-[0.22em] text-[#8A7968] font-bold block mb-1">
+                    {contact.side} ({contact.place})
+                  </span>
+                  
+                  <div class="flex flex-wrap justify-center items-center gap-3 mt-2">
+                    {contact.phones.map((phone) => (
+                      <a
+                        href={`tel:${phone}`}
+                        class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2A241E] hover:text-[#DF7A4D] bg-white py-2 px-3.5 rounded-full border border-[#DFD5C4] shadow-sm transition-all hover:scale-105 active:scale-95"
+                      >
+                        <svg class="w-3 h-3 text-[#DF7A4D]" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z" />
+                        </svg>
+                        {phone}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- ═════════════════════════════════════════════════════════
+             FOOTER: CLOSING GREETING
+             "WE CAN'T WAIT TO CELEBRATE WITH YOU!"
+             ═════════════════════════════════════════════════════════ -->
+        <footer class="mt-20 text-center pb-12 pt-4">
+          <div class="w-12 h-[1px] bg-[#C29B62] mx-auto mb-6"></div>
+          
+          <h2 class="font-['Cormorant_Garamond',serif] text-2xl sm:text-3xl italic tracking-wide text-[#2A241E] leading-snug">
+            We can't wait to<br />celebrate with you!
+          </h2>
+          
+          <div class="mt-6 flex justify-center items-center gap-3">
+            <span class="w-8 h-[0.5px] bg-[#C29B62]/60"></span>
+            <div class="w-2 h-2 rounded-full border border-[#DF7A4D] bg-[#DF7A4D]/20"></div>
+            <span class="w-8 h-[0.5px] bg-[#C29B62]/60"></span>
+          </div>
+
+          <p class="font-['Cinzel',serif] text-[10px] tracking-[0.25em] text-[#8A7C6D] uppercase mt-5">
+            D. Maneshkumar &amp; R. Hemapriya • 2026
+          </p>
+        </footer>
+
+      </section>
+
+    </main>
+
+  </body>
+</html>

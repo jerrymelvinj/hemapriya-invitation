@@ -184,13 +184,27 @@ const contacts = [
         {couple.initials}
       </span>
       <div 
-        class="w-7 h-7 rounded-full seal-shimmer flex items-center justify-center cursor-pointer transition-transform hover:scale-105 active:scale-95" 
-        title="Family Seal"
-        aria-label="Family Seal"
+        class="w-8 h-8 rounded-full seal-shimmer flex items-center justify-center cursor-pointer transition-transform hover:scale-110 active:scale-95 shadow-[0_2px_8px_rgba(177,144,82,0.4)] border border-[#F5E2B8]/70 p-1" 
+        title="Mangala Kalasam — Auspicious Hindu Wedding Symbol"
+        aria-label="Auspicious Hindu Wedding Kalasam"
       >
-        <span class="w-4 h-4 rounded-full border border-[#FAF8F3]/60 flex items-center justify-center">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#FAF8F3]/80"></span>
-        </span>
+        <svg class="w-5 h-5 text-[#FFF9EE] drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Coconut (Theengai) with tip -->
+          <path d="M12 2 C10.8 4 9.8 6.2 9.8 8.2 C10.8 8.9 13.2 8.9 14.2 8.2 C14.2 6.2 13.2 4 12 2 Z" />
+          <!-- Five Mango Leaves (Maavilai) fanning outward -->
+          <path d="M12 8.2 C10.5 5.8 7 5.2 5 6.8 C6.5 9 9.5 9.2 10.5 9.2 Z" />
+          <path d="M12 8.2 C13.5 5.8 17 5.2 19 6.8 C17.5 9 14.5 9.2 13.5 9.2 Z" />
+          <path d="M12 8.2 C11 5 8.5 2.8 7.8 3.3 C8.5 5.8 10 7.8 11 8.8 Z" opacity="0.9" />
+          <path d="M12 8.2 C13 5 15.5 2.8 16.2 3.3 C15.5 5.8 14 7.8 13 8.8 Z" opacity="0.9" />
+          <!-- Pot Rim & Neck (Vaai) -->
+          <rect x="8.5" y="9.5" width="7" height="1.6" rx="0.8" />
+          <!-- Pot Body (Kumbham) -->
+          <path d="M9.5 11.2 C6.8 13.2 6.5 17.2 9 19.8 C10.2 21 13.8 21 15 19.8 C17.5 17.2 17.2 13.2 14.5 11.2 Z" />
+          <!-- Pedestal Stand -->
+          <path d="M10 21 H14 L15 22.5 H9 Z" />
+          <!-- Central Kumkum Tilak -->
+          <circle cx="12" cy="15.8" r="1.1" fill="#B19052" stroke="#FFF9EE" stroke-width="0.5" />
+        </svg>
       </div>
     </header>
 
@@ -205,6 +219,13 @@ const contacts = [
         <!-- STATIC TYPOGRAPHY LAYER (Z-20) -->
         <div class="relative z-20 px-6 flex flex-col items-end text-right w-full">
           
+          <!-- Traditional Tamil Hindu Invocation -->
+          <div class="mb-1.5 text-right">
+            <span class="text-[11px] sm:text-xs text-[#C29B62] font-serif tracking-widest font-medium">
+              ॥ ஸ்ரீ விநாயகர் துணை ॥
+            </span>
+          </div>
+
           <!-- Sacred Invocation / Blessings -->
           <div class="mb-3 max-w-[340px] text-right">
             <p class="font-['Jost',sans-serif] text-[9px] uppercase tracking-[0.22em] text-[#7D6F61] leading-relaxed">

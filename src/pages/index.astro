@@ -62,20 +62,7 @@ const events = [
   },
 ];
 
-const family = {
-  brideBrothers: [
-    { name: "R. Venkataramanan", qualification: "BCA" },
-    { name: "R. Ritheeswaran", qualification: "B.E." },
-  ],
-  groomBrotherFamily: {
-    parents: "Mr. T. Dineshkumar (MCA) & Mrs. T. Sandhiya (M.Com)",
-    children: "T. Hariharan & T. Vyas",
-  },
-  groomSisterFamily: "Mr. Sundarraj & Mrs. Jeyalakshmi",
-  groomAuntUncle: "Mr. P. Saravanan & Mrs. S. Meera (Chennai)",
-  groomMaternalUncles: ["Mr. Andi", "Mr. Singaram", "Mr. Velusamy", "Mr. Karumalai"],
-  brideMaternalUncles: ["G. Selvam", "Iniyan", "Mugilan", "Hemanth Priyan", "Mr. Dinesh"],
-};
+
 
 const contacts = [
   {
@@ -388,76 +375,7 @@ const contacts = [
             </article>
           ))}
 
-          <!-- ═════════════════════════════════════════════════════════
-               KEY FAMILY MEMBERS CARD
-               ═════════════════════════════════════════════════════════ -->
-          <article class="scroll-reveal-card bg-white rounded-[28px] p-7 shadow-[0_8px_30px_rgba(42,36,30,0.04)] border border-[#EFE8DC] text-center flex flex-col items-center">
-            
-            <span class="text-[9px] uppercase tracking-[0.25em] text-[#DF7A4D] font-semibold mb-1">
-              BLESSINGS &amp; WISHES
-            </span>
 
-            <h3 class="font-['Cormorant_Garamond',serif] text-2xl font-semibold text-[#2A241E] tracking-wide uppercase mb-1">
-              Key Family Members
-            </h3>
-            <p class="text-[10px] tracking-[0.2em] text-[#7D6F61] uppercase font-light mb-4">
-              With Best Compliments From
-            </p>
-            
-            <div class="w-12 h-[1px] bg-[#C29B62]/60 mb-5"></div>
-
-            <div class="w-full text-left space-y-4 text-xs">
-              
-              <!-- Bride's Brothers -->
-              <div class="bg-[#FBF8F2] p-3.5 rounded-xl border border-[#EFE8DC]">
-                <p class="text-[9px] uppercase tracking-[0.2em] text-[#DF7A4D] font-semibold mb-1">
-                  Bride's Brothers
-                </p>
-                <p class="text-[#3A3127] font-medium">
-                  {family.brideBrothers.map(b => `${b.name} (${b.qualification})`).join(" & ")}
-                </p>
-              </div>
-
-              <!-- Groom's Brother's Family -->
-              <div class="bg-[#FBF8F2] p-3.5 rounded-xl border border-[#EFE8DC]">
-                <p class="text-[9px] uppercase tracking-[0.2em] text-[#DF7A4D] font-semibold mb-1">
-                  Groom's Brother's Family
-                </p>
-                <p class="text-[#3A3127] font-medium leading-relaxed">
-                  {family.groomBrotherFamily.parents}<br />
-                  <span class="text-[11px] text-[#7D6F61]">Children: {family.groomBrotherFamily.children}</span>
-                </p>
-              </div>
-
-              <!-- Sister & Brother-in-Law & Aunt/Uncle -->
-              <div class="bg-[#FBF8F2] p-3.5 rounded-xl border border-[#EFE8DC]">
-                <p class="text-[9px] uppercase tracking-[0.2em] text-[#DF7A4D] font-semibold mb-1">
-                  Sister, Brother-in-Law &amp; Extended Family
-                </p>
-                <p class="text-[#3A3127] font-medium leading-relaxed">
-                  • {family.groomSisterFamily} (Sister &amp; Brother-in-law)<br />
-                  • {family.groomAuntUncle} (Aunt &amp; Uncle)
-                </p>
-              </div>
-
-              <!-- Maternal Uncles -->
-              <div class="bg-[#FBF8F2] p-3.5 rounded-xl border border-[#EFE8DC]">
-                <p class="text-[9px] uppercase tracking-[0.2em] text-[#DF7A4D] font-semibold mb-1">
-                  Maternal Uncles
-                </p>
-                <div class="space-y-1.5 text-[11px] text-[#42382F] leading-relaxed">
-                  <p>
-                    <strong class="text-[#2A241E]">Groom's Side:</strong> {family.groomMaternalUncles.join(", ")}
-                  </p>
-                  <p>
-                    <strong class="text-[#2A241E]">Bride's Side:</strong> {family.brideMaternalUncles.join(", ")}
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-          </article>
 
           <!-- ═════════════════════════════════════════════════════════
                CONTACT & INVITATION DESK CARD
